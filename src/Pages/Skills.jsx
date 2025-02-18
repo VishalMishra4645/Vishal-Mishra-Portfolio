@@ -1,4 +1,3 @@
-import React from "react";
 import "../Style/Skills.css";
 import img1 from "../images/Skills/html.png";
 import img2 from "../images/Skills/css.png";
