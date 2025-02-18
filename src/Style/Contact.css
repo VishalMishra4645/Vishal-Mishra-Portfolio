@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.contact {
+    width: 100%;
+    height: 100vh;
+    margin-top: 4%;
+    /* border: 1px solid cyan; */
+}
+.contact h2{
+    text-align: center;
+    margin-top: 2%;
+    font-size: 3rem;
+}
+.contact_main {
+    width: 40%;
+    height: 67vh;
+    margin: auto;
+    margin-top: 3%;
+    border-radius: 20px;
+
+    background-color: rgb(145, 125, 125);
+}
+#firstName{
+    width: 90%;
+    height: 5vh;
+    position: relative;
+    margin-top: 5%;
+    margin-left: 3%;
+    outline: none;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 10px;
+    border: none;
+}
+#email{
+    width: 90%;
+    height: 5vh;
+    margin-top: 5px;
+    margin-left: 3%;
+    outline: none;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 10px;
+    border: none;
+}
+#phone{
+    width: 90%;
+    height: 5vh;
+    margin-top: 5px;
+    margin-left: 3%;
+    outline: none;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 10px;
+    border: none;
+}
+#notes{
+    width: 90%;
+    height: 25vh;
+    margin-top: 5px;
+    margin-left: 3%;
+    outline: none;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: 900;
+    border-radius: 10px;
+    border: none;
+}
+.contact_main button{
+    width: 94%;
+    height: 7vh;
+    margin-top: 2px;
+    margin-left: 3%;
+    outline: none;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 10px; 
+    border: none; 
+    transition: .6s; 
+}
+.contact_main button:hover{
+    box-shadow: 0px 0px 20px 10px black;
+    /* background: linear-gradient(to left, whitesmoke, red, purple, rgb(134, 134, 207) , pink); */
+    background-color: purple;
+    letter-spacing: 5px;
+    color: white;
+    cursor: pointer;
+    transition: .6s;
+}
+.hoverbutton{
+    box-shadow: 0px 0px 20px 10px black;
+    /* background: linear-gradient(to left, whitesmoke, red, purple, rgb(134, 134, 207) , pink); */
+    background-color: purple;
+    letter-spacing: 5px;
+    color: white;
+    cursor: pointer;
+    transition: .6s;
+}
+.error-placeholder::placeholder {
+    color: red;
+}
+.normal-placeholder::placeholder {
+    color: gray;
+}
+.contact-btnn2{
+    width: 4%;
+    height: 7vh;
+    cursor: pointer;
+    margin-left: 93%;
+    /* position: fixed; */
+    font-size: 1.2rem;
+    font-weight: 900;
+    border-radius: 18px;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+}
+  @media screen and (max-width: 500px) {
+    .contact{
+        width: 100%;
+        height: 100vh;
+        /* border: 2px solid white; */
+    }
+    .contact_main{
+        width: 90%;
+        height: 68vh;
+        margin-top: 10%;
+
+        /* border: 2px solid red; */
+    }
+  }
+  

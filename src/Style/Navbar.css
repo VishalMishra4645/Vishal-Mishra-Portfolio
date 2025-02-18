@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    width: 100%;
+    height: 100px;
+    position: sticky;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #fff;
+    background-color: #030517;
+    z-index: 1;
+    /* border: 1px solid white; */
+}
+.logo{
+    /* margin-left: -55%; */
+    /* margin-top: 3%; */
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+}
+.navbar span{
+    color:  red ;
+}
+.nav ul{
+    position: relative;
+    left: 10%;
+    display: flex;
+    column-gap: 50px;
+}
+.nav ul li{
+    list-style: none;
+}
+.nav a{
+    font-size: 1.2rem;
+    color: aqua;
+    font-weight: 600;
+    transition: 1s;
+    cursor: pointer;
+}
+.nav a:hover{
+    /* text-decoration: ; */
+    transition: .6s;
+    color: red;
+}
+.menu button{
+    display: none;
+}
+.menu a{
+    font-size: 1.7rem;
+}
+.active{
+    color: red;
+}
+@media screen and (max-width: 850px ) {
+    /* nav{
+        flex-direction: column;
+    } */
+    .logo{
+        margin-left: -55%;
+        margin-top: 3%;
+        font-size: 2rem;
+        font-weight: 700;
+        color: #fff;
+    }
+    .navbar{
+        width: 100%;
+        height: 20%;
+        position: relative;
+    }
+    .nav{
+        width: 50%;
+        height: 100vh;
+        flex-direction: column;
+        position: fixed;
+        top: 12%;
+        left: -100%;
+        background-color: rgb(60, 146, 146);
+        /* transform: translateX(-20%); */
+        transition: .6s;
+    }
+    .nav ul{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .nav a{
+        position: relative;
+        top: 30px;
+        color: cyan;
+    }
+    .menu button{
+        width: 10%;
+        height: 6vh;
+        font-size: 1.7rem;
+        /* margin-top: -5%; */
+        display: block;
+        color: #fff;
+        background-color: transparent;
+        border: none;
+    }
+    .active{
+        left: 0%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .logo{
+        margin-left: -5%;
+    }
+    .menu button{
+        margin-top: -3%;
+        margin-left: 180px;
+        /* margin-right: -0%; */
+    }
+}
+
+    
+    

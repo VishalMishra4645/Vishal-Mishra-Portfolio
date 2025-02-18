@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.services{
+    width: 100%;
+    height: 100vh;
+    /* border: 1px solid white; */
+}
+.services h1{
+    margin-top: 8%;
+    text-align: center;
+    font-size: 3rem;
+}
+.services_main{
+    width: 90%;
+    /* height: 50%; */
+    margin: auto;
+    margin-top: 8%;
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid yellow; */
+}
+.services_container{
+    width: 30%;
+    height: 45vh;
+    transition: .6s;
+    box-shadow: 2px 2px 50px 2px blue;
+    border-radius: 20px;
+}
+.services_container:hover{
+    transition: .6s;
+    box-shadow: 5px 5px 100px 5px red;
+}
+.services_container i{
+    font-size: 2rem;
+    color: cyan;
+    position: relative;
+    top: 10%;
+    left: 5%;
+}
+.services_container h2{
+    margin-top: 13%;
+    margin-left: 5%;
+}
+.services_container p{
+    width: 85%;
+    font-size: .9rem;
+    position: relative;
+    text-align: justify;
+    bottom: 2%;
+    left: 5%;
+}
+.services_container button{
+    width: 30%;
+    height: 5vh;
+    margin-left: 5%;
+    margin-top: 4%;
+    transition: .6s;
+    background-color: cyan;
+    border-radius: 30px ;
+    box-shadow: 1px 1px 15px 1px cyan;
+    border: none;
+}
+.services_container1 button{
+    margin-top: 8%;
+}
+.services_container button:hover{
+    transition: .6s;
+    cursor: pointer;
+    box-shadow: 2px 2px 50px 2px cyan;
+}
+@media screen and (max-width: 850px) {
+    .services{
+        width: 110%;
+        height: 310vh;
+        margin-top: 10%;
+        /* border: 1px solid white; */
+    }
+    .services_main{
+        width: 100%;
+        /* height: 100vh; */
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* gap: 30px; */
+    }
+    .services_container{
+        min-width: 350px;
+        min-height: 65vh;
+        margin-top: 15%;
+        /* background-color: red; */
+    }
+}
+@media screen and (max-width: 500px) {
+    .services{
+        width: 100%;
+        height: 290vh;
+        margin-top: -0%;
+        /* border: 2px solid white ; */
+    }
+    .services h1{
+        font-size: 3rem;
+    }
+    .services_main{
+        width: 100%;
+        height: 235vh;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 50px;
+        /* border: 2px solid white ; */
+    }
+    .services_container{
+        width: 85%;
+        padding-bottom: 80px;
+        margin-top: 5%;
+        /* background-color: red; */
+    } 
+    .services_container1{
+        margin-top: 35%;
+    }
+    .services_container i{
+        font-size: 3rem;
+    }
+    .services_container h2{
+        margin-top: 20%;
+        font-size: 2rem;
+    }    
+    .services_container p{
+        font-size: 1.2rem;
+    }
+    .services_container button{
+        width: 50%;
+        height: 8vh;
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+}
