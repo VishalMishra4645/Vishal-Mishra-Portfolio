@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import '../Style/Contact.css'
+import '../Responsive CSS/ContactRps.css'
 import { useForm } from "react-hook-form";
 import { Link } from 'react-scroll';
 

@@ -1,4 +1,5 @@
 import "../Style/Skills.css";
+import '../Responsive CSS/SkillsRps.css'
 import img1 from "../images/Skills/html.png";
 import img2 from "../images/Skills/css.png";
 import img3 from "../images/Skills/JavaScript.png";

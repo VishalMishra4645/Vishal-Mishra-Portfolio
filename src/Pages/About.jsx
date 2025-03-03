@@ -1,4 +1,5 @@
 import '../Style/About.css'
+import '../Responsive CSS/AboutRps.css'
 import img1 from '../images/img1.jpg'
 import Services from '../Pages/Services'
 

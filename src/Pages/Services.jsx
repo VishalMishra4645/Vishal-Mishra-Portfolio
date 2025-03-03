@@ -1,5 +1,6 @@
 import React from "react";
 import "../Style/Services.css";
+import '../Responsive CSS/ServicesRps.css'
 import Skills from "../Pages/Skills";
 
 const Services = () => {

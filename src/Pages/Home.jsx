@@ -1,4 +1,5 @@
 import '../Style/Home.css'
+import '../Responsive CSS/HomeRps.css'
 import img1 from '../images/img1.jpg'
 import About from '../Pages/About';
 
@@ -15,11 +16,11 @@ const Home = () => {
           voluptates doloremque, incidunt dolorem consequuntur debitis magnam
           rerum ut minus perferendis voluptatibus dolores?
         </p> */}
-        <a href="#contact"><button>Hier Me</button></a>
-        <a href="" className="home_btn2"><button>Download CV</button></a>
+        <a href="#contact"><button>Hire Me</button></a>
+        <a href="#" className="home_btn2"><button>Download CV</button></a>
       </div>
       <div className="home_right">
-        <img src={img1} alt="" />
+        <img src={img1} />
       </div>
     </div>
       <About/>

@@ -1,5 +1,6 @@
 import React from "react";
 import "../Style/Project.css";
+import '../Responsive CSS/ProjectRps.css'
 import img1 from "../images/project/img1.png";
 import img2 from "../images/project/img2.png";
 import Contact from "../Pages/Contact";
