@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.about{
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: flex;
+    /* border: 1px solid white; */
+}
+.about img{
+    width: 28%;
+    height: 50vh;
+    margin-top: 4%;
+    margin-left: 10%;
+    border-radius: 100%;
+    box-shadow: 5px 5px 30px 10px aqua ;
+}
+.about_right{
+    width: 40%;
+    height: 80%;
+    margin-left: 10%;
+    /* margin-top: 5%; */
+    /* border: 2px solid white; */
+}
+.about_right h1{
+    text-align: center;
+}
+.about_right h2{
+    margin-top: 7%;
+}
+font u{
+    color: cyan;
+}
+font span{
+    color: red;
+}
