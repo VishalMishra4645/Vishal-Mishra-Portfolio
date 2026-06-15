@@ -1,12 +1,12 @@
 import "../Style/Skills.css";
 import Project from "../Pages/Project";
 
-import html from "../images/Skills/html.png";
-import css from "../images/Skills/css.png";
-import js from "../images/Skills/JavaScript.png";
-import angular from "../images/Skills/angular.png";
-import react from "../images/Skills/React.webp";
-import bootstrap from "../images/Skills/bootstrap.png";
+import html from "../images/skills/html.png";
+import css from "../images/skills/css.png";
+import js from "../images/skills/JavaScript.png";
+import angular from "../images/skills/angular.png";
+import react from "../images/skills/React.webp";
+import bootstrap from "../images/skills/bootstrap.png";
 
 const Skills = () => {
   const techStack = [
