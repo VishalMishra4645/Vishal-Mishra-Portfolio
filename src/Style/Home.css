@@ -1,68 +1,213 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.home{
-    width: 100%;
-    height:100vh;
-    display: flex;
-    /* margin-top: 5%; */
-    /* border: 1px solid red; */
-}
-.home_left{
-    width: 40%;
-    height: 50%;
-    margin-top: 20%;
-    margin-left: 20%; 
-    /* border: 1px solid white; */
-}
-.home_btn2{
-    margin-left: 10%;
-}
-.home_left h1{
-    font-size: 2rem;
-    color: red;
-}
-.home_left h3{
-    font-size: 1.5rem;
-    margin-top: -0%;
-}
-span{
-    color: aqua;
-}
-.home_left p{
-    margin-top: 3%;
-    font-weight: 600;
-}
-.home_left button{
-    width: 30%;
-    height: 6vh;
-    margin-top: 10%;
-    margin-left: -5%;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 25px;
-    border: none;
-    background-color: rgb(0, 137, 155);
-    transition: 1s;
-}
-.home_left button:hover{
-    box-shadow: 3px 3px 50px 3px aqua ;
-    transition: .6s;
-    cursor: pointer;
-}
-.home_right{
-    width: 28%;
-    height: 50vh;
-    margin-top: 15%;
-    margin-left: -5%;
-    border-radius: 100%;
-    /* border: 1px solid white; */
-}
-.home_right img{
-    width: 100%;
-    height:100%;
-    border-radius: 100%;
-    box-shadow: 5px 5px 30px 10px aqua ;
 
+.home {
+  min-height: 100vh;
+  width: 100%;
+  padding: 120px 10% 80px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+
+  background: #030517;
+  color: white;
+}
+
+.home-content {
+  flex: 1;
+  max-width: 650px;
+}
+
+.greeting {
+  font-size: 1.1rem;
+  color: #00e5ff;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.home-content h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.home-content h1 span {
+  color: #00e5ff;
+}
+
+.home-content h2 {
+  margin-top: 10px;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #c7c7c7;
+}
+
+.home-description {
+  margin-top: 25px;
+  color: #a8a8a8;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.button-group {
+  display: flex;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 14px 30px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.primary-btn {
+  border: none;
+  background: #00e5ff;
+  color: #000;
+}
+
+.primary-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 25px #00e5ff;
+}
+
+.secondary-btn {
+  background: transparent;
+  border: 2px solid #00e5ff;
+  color: white;
+}
+
+.secondary-btn:hover {
+  background: #00e5ff;
+  color: black;
+}
+
+.social-links {
+  display: flex;
+  gap: 25px;
+  margin-top: 35px;
+}
+
+.social-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: #00e5ff;
+}
+
+.home-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.image-card {
+  width: 380px;
+  height: 450px;
+
+  border-radius: 24px;
+  overflow: hidden;
+
+  border: 3px solid #00e5ff;
+
+  box-shadow:
+    0 0 20px #00e5ff,
+    0 0 40px rgba(0, 229, 255, 0.4);
+
+  animation: floating 4s ease-in-out infinite;
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Tablet */
+
+@media (max-width: 992px) {
+  .home {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 50px;
+  }
+
+  .button-group {
+    justify-content: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .home-content h1 {
+    font-size: 3rem;
+  }
+
+  .image-card {
+    width: 320px;
+    height: 400px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 576px) {
+  .home {
+    padding: 100px 25px 50px;
+  }
+
+  .home-content h1 {
+    font-size: 2.3rem;
+  }
+
+  .home-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .home-description {
+    font-size: 0.95rem;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+  }
+
+  .image-card {
+    width: 250px;
+    height: 320px;
+  }
 }

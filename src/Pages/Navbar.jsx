@@ -1,35 +1,122 @@
-import React, { useState } from 'react'
-import '../Style/Navbar.css'
-import img1 from '../images/services/icon.png'
-import img2 from '../images/Skills/skill.png'
-import img3 from '../images/project/img3.png'
-import { Link } from 'react-scroll'
+import React, { useState } from "react";
+import "../Style/Navbar.css";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
-    const [active, setActive] = useState(false);
-    const [color , setColor] = useState("home")
+  const [menuOpen, setMenuOpen] = useState(false);
 
-      return (
-    <>
-        <div className="navbar">
-            <a className="logo">Port<span>F</span>olio.</a>
-            <div className={`nav ${active ? 'active' : ''}`} >
-                <ul>
-                    <li><Link to='home' style={{color : color === 'home' && 'red'}}  spy={true} smooth={true} offset={-100} duration={500} onClick={()=> {/*setActive(false);*/ setColor("home"); console.log("asdas"), setActive(!active)}}><i class="bi bi-house-check"></i>&nbsp;&nbsp;&nbsp;Home</Link></li>
-                    <li><Link to='about' style={{color : color === 'about' && 'red'}} spy={true} smooth={true} offset={-100} duration={500} onClick={()=> {/*setActive(false);*/ setColor("about"),setActive(!active)}}><i class="bi bi-person-lines-fill"></i>&nbsp;&nbsp;&nbsp;About</Link></li>
-                    <li><Link to='services' style={{color : color === 'services' && 'red'}} spy={true} smooth={true} offset={-100} duration={500} onClick={()=> {/*setActive(false);*/ setColor("services"),setActive(!active)}}>Services</Link></li>
-                    <li><Link to='skills' style={{color : color === 'skills' && 'red'}} spy={true} smooth={true} offset={-100} duration={500} onClick={()=> {/*setActive(false);*/ setColor("skills"),setActive(!active)}}>Skills</Link></li>
-                    <li><Link to='project' style={{color : color === 'project' && 'red'}} spy={true} smooth={true} offset={-100} duration={500} onClick={()=> {/*setActive(false);*/ setColor("project"),setActive(!active)}}>Project</Link></li>
-                    <li><Link to='contact' style={{color : color === 'contact' && 'red'}} spy={true} smooth={true} offset={-100} duration={500} onClick={()=> {/*setActive(false);*/ setColor("contact"),setActive(!active)}}>Contact</Link></li>
-                </ul>
-            </div>
-        <div className='menu'>
-            <button onClick={()=> setActive(!active)}>&#9776;</button>
-        </div>
-        </div>
+  const closeMenu = () => setMenuOpen(false);
 
-    </>
-  )
-}
+  return (
+    <header className="navbar">
+      <div className="logo">
+        <Link
+          to="home"
+          spy={true}
+          smooth={true}
+          duration={500}
+          offset={-80}
+        >
+          Port<span>F</span>olio.
+        </Link>
+      </div>
 
-export default Navbar
+      <nav className={`nav ${menuOpen ? "active" : ""}`}>
+        <ul>
+          <li>
+            <Link
+              to="home"
+              spy={true}
+              smooth={true}
+              duration={500}
+              offset={-80}
+              activeClass="active-link"
+              onClick={closeMenu}
+            >
+              Home
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              to="about"
+              spy={true}
+              smooth={true}
+              duration={500}
+              offset={-80}
+              activeClass="active-link"
+              onClick={closeMenu}
+            >
+              About
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              to="services"
+              spy={true}
+              smooth={true}
+              duration={500}
+              offset={-80}
+              activeClass="active-link"
+              onClick={closeMenu}
+            >
+              Services
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              to="skills"
+              spy={true}
+              smooth={true}
+              duration={500}
+              offset={-80}
+              activeClass="active-link"
+              onClick={closeMenu}
+            >
+              Skills
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              to="project"
+              spy={true}
+              smooth={true}
+              duration={500}
+              offset={-80}
+              activeClass="active-link"
+              onClick={closeMenu}
+            >
+              Projects
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              to="contact"
+              spy={true}
+              smooth={true}
+              duration={500}
+              offset={-80}
+              activeClass="active-link"
+              onClick={closeMenu}
+            >
+              Contact
+            </Link>
+          </li>
+        </ul>
+      </nav>
+
+      <button
+        className="menu-btn"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        {menuOpen ? "✕" : "☰"}
+      </button>
+    </header>
+  );
+};
+
+export default Navbar;

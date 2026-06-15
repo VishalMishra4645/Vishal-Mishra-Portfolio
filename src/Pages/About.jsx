@@ -1,42 +1,67 @@
-import '../Style/About.css'
-import '../Responsive CSS/AboutRps.css'
-import img1 from '../images/img1.jpg'
-import Services from '../Pages/Services'
-
+import "../Style/About.css";
+import img1 from "../images/img1.jpg";
+import Services from "../Pages/Services";
 
 const About = () => {
   return (
     <>
-      <div className="about" id='about'>
-        <img src={img1} alt="" />
-        <div className="about_right">
-          <h1>About <span>Me</span></h1> <br />
-          <h2>Fronted Developer</h2> <br />
-          <font face="Verdana" size="3" color="white">
-            Thanks for your interest, here
-            is a quick story of me and this
-            website. <br /> <br />
-            I have good interpersonal skills, am an excellent team worker and am keen and very willing to learn and develop new skills. <br /> <br />
-
-            I do my work mainly in <u><span>React js</span></u> ,
-            JavaScript. I know Web Development,
-            LINUX and database as well. <br /><br />
-
-            This website is basically one of my
-            Web Development project which is
-            built using <u><span>HTML</span></u>, <u><span>CSS</span></u> & <u><span>REACT JS</span></u>.
-            Here one can also find ideas for
-            projects in different languages. <br /><br />
-
-            Thanks again for reading this,
-            because of people like you, it
-            exists and prospers! 
-          </font>
+      <section className="about" id="about">
+        <div className="about-image">
+          <div className="about-image-card">
+            <img src={img1} alt="Vishal Mishra" />
+          </div>
         </div>
-      </div>
-      <Services />
-    </>
-  )
-}
 
-export default About
+        <div className="about-content">
+          <h1>
+            About <span>Me</span>
+          </h1>
+
+          <h3>Software Developer</h3>
+
+          <p>
+            I am a passionate Software Developer with hands-on experience in
+            Angular development and modern web technologies. I enjoy building
+            responsive, scalable, and user-friendly applications that solve
+            real-world problems.
+          </p>
+
+          <p>
+            My expertise includes React.js, Angular, JavaScript, HTML5, CSS3,
+            Bootstrap, and REST API integration. I am also expanding my
+            full-stack development skills using Node.js, Express.js, and
+            MongoDB.
+          </p>
+
+          <p>
+            I have worked on academic and personal projects including portfolio
+            websites, management systems, and e-commerce applications. My goal
+            is to continuously improve my technical skills and contribute to
+            impactful software products.
+          </p>
+
+          <div className="about-stats">
+            <div className="stat-box">
+              <h2>6+</h2>
+              <span>Months Experience</span>
+            </div>
+
+            <div className="stat-box">
+              <h2>2+</h2>
+              <span>Projects Completed</span>
+            </div>
+
+            <div className="stat-box">
+              <h2>100%</h2>
+              <span>Learning Focused</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* <Services /> */}
+    </>
+  );
+};
+
+export default About;

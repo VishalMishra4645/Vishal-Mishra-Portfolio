@@ -1,18 +1,19 @@
-// import About from './About/About';
-// import './App.css'
-// import Home from './Home/Home.jsx';
-// import Services from './Services/Services.jsx';
+import Navbar from "./Components/Navbar";
+import Home from "./Pages/Home";
+import About from "./Pages/About";
+import Services from "./Pages/Services";
+import Skills from "./Pages/Skills";
+import Project from "./Pages/Project";
+import Contact from "./Pages/Contact";
 
+function App() {
+  return (
+    <>
+      {/* <Navbar /> */}
 
-// function App() {
-  
-//   return (
-//     <div>
-//       <Home />
-//       <About />
-//       <Services />
-//     </div>
-//   )
-// }
+      
+    </>
+  );
+}
 
-// export default App
+export default App;

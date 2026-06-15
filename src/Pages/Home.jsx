@@ -1,30 +1,68 @@
-import '../Style/Home.css'
-import '../Responsive CSS/HomeRps.css'
-import img1 from '../images/img1.jpg'
-import About from '../Pages/About';
+import "../Style/Home.css";
+import img1 from "../images/img1.jpg";
 
 const Home = () => {
-  return (<>
-    <div className="home">
-      <div className="home_left">
-        <h2>Helllo, It's Me</h2>
-        <h1>Vishal Mishra</h1>
-        <h3>And I'm a <span> <b>Frontend Developer</b> </span></h3>
-        {/* <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-          explicabo unde alias, aperiam beatae officiis accusantium. At
-          voluptates doloremque, incidunt dolorem consequuntur debitis magnam
-          rerum ut minus perferendis voluptatibus dolores?
-        </p> */}
-        <a href="#contact"><button>Hire Me</button></a>
-        <a href="#" className="home_btn2"><button>Download CV</button></a>
+  return (
+    <section className="home" id="home">
+      <div className="home-content">
+        <p className="greeting">👋 Hello, I'm</p>
+
+        <h1>
+          Vishal <span>Mishra</span>
+        </h1>
+
+        <h2>Software Developer</h2>
+
+        <p className="home-description">
+          Software Developer with hands-on experience in Angular development and
+          modern web technologies. Skilled in building responsive user
+          interfaces, integrating APIs, and developing full-stack applications
+          using React, Node.js, Express.js, and MongoDB.
+        </p>
+
+        <div className="button-group">
+          <a href="#project">
+            <button className="primary-btn">
+              View Projects
+            </button>
+          </a>
+
+          <a href="/resume.pdf" download>
+            <button className="secondary-btn">
+              Download Resume
+            </button>
+          </a>
+        </div>
+
+        <div className="social-links">
+          <a
+            href="https://github.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+
+          <a
+            href="https://linkedin.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>
+
+          <a href="mailto:yourmail@gmail.com">
+            Email
+          </a>
+        </div>
       </div>
-      <div className="home_right">
-        <img src={img1} />
+
+      <div className="home-image">
+        <div className="image-card">
+          <img src={img1} alt="Vishal Mishra" />
+        </div>
       </div>
-    </div>
-      <About/>
-      </>
+    </section>
   );
 };
 

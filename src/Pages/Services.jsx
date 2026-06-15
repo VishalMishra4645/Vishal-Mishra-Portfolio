@@ -1,55 +1,57 @@
-import React from "react";
 import "../Style/Services.css";
-import '../Responsive CSS/ServicesRps.css'
 import Skills from "../Pages/Skills";
 
 const Services = () => {
   return (
     <>
-      <div className="services" id="services">
-        <h1>
-          My<span>Services</span>
-        </h1>
-        <div className="services_main">
-          <div className="services_container services_container1">
-            <i class="bi bi-braces"></i> <br />
-            <h2>UI/UX Design</h2> <br />
+      <section className="services" id="services">
+        <div className="section-title">
+          <h1>
+            What I <span>Do</span>
+          </h1>
+          <p>
+            Building modern, responsive and scalable web applications using
+            latest technologies.
+          </p>
+        </div>
+
+        <div className="services-grid">
+          <div className="service-card">
+            <i className="bi bi-code-slash"></i>
+
+            <h2>Frontend Development</h2>
+
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing 
-              elit. Earum explicabo, aperiam sit itaque 
-              dicta nam modi vel at. Numquam sapiente iste 
-              aspernatur a consequatur rerum. Nesciunt, 
-              perspiciatis ratione!
+              Creating responsive and interactive user interfaces using
+              Angular, React, JavaScript, HTML5 and CSS3 with modern UI
+              practices.
             </p>
-            <button>Learn More</button>
           </div>
-          <div className="services_container services_container2">
-            <i class="bi bi-crop"></i>
-            <h2>Web Design</h2> <br />
+
+          <div className="service-card">
+            <i className="bi bi-server"></i>
+
+            <h2>Backend Development</h2>
+
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing 
-              elit. Earum explicabo, aperiam sit itaque 
-              quae iusto dicta nam modi vel at. Numquam sapiente iste 
-              aspernatur a consequatur rerum. Nesciunt, 
-              perspiciatis ratione!
+              Building REST APIs and server-side applications using Node.js,
+              Express.js and integrating databases for real-world projects.
             </p>
-            <button>Learn More</button>
           </div>
-          <div className="services_container services_container3">
-          <i class="bi bi-apple"></i>
-            <h2>App Design</h2> <br />
+
+          <div className="service-card">
+            <i className="bi bi-database"></i>
+
+            <h2>Database Management</h2>
+
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing 
-              elit. Earum explicabo, aperiam sit itaque quae iusto 
-              dicta nam modi vel at. Numquam sapiente iste 
-              aspernatur a consequatur rerum. Nesciunt, 
-              perspiciatis ratione!
+              Designing and managing MongoDB databases, handling CRUD
+              operations and optimizing data flow between frontend and backend.
             </p>
-            <button>Learn More</button>
           </div>
         </div>
-      </div>
-      <Skills />
+      </section>
+
     </>
   );
 };

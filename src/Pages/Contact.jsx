@@ -1,91 +1,134 @@
-import React, { useState } from 'react'
-import '../Style/Contact.css'
-import '../Responsive CSS/ContactRps.css'
+import React from "react";
+import "../Style/Contact.css";
 import { useForm } from "react-hook-form";
-import { Link } from 'react-scroll';
+import { Link } from "react-scroll";
 
 const Contact = () => {
-
-  const [click , setClick] = useState(false)
-  const closeMenu = () => setClick(false)
-
   const {
-      register,
-      handleSubmit,
-      watch,
-      formState: { errors, isSubmitting },
-      reset,
-    } = useForm();
-  
-    const onSubmit = async (data) => {
-      await new Promise((resolve) => setTimeout(resolve, 3000));
-      console.log(data);
-      reset();
-    };
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+    reset,
+  } = useForm();
 
-  // const [bgcolor , setBgcolor] = useState(false)
-    
+  const onSubmit = async (data) => {
+    await new Promise((resolve) => setTimeout(resolve, 1500));
+
+    console.log(data);
+
+    alert("Message Sent Successfully!");
+
+    reset();
+  };
 
   return (
-    <>
-      <div className="contact" id="contact">
-        <h2>Contact <span>Us</span> </h2>
-        <div className="contact_main">
-          <form onSubmit={handleSubmit(onSubmit)}>
-            {/* action="https://api.web3forms.com/submit" method="POST">
-           <input type="hidden" name="access_key" value="2324654c-6bdd-4987-aebf-0fd1843bd110"/> */}
-            <input type="text" id='firstName' placeholder={errors.firstName ? "Please Enter Your Full Name " : 'Enter Your Full Name'} 
-              className={errors.firstName ? "error-placeholder" : "normal-placeholder"}
-              {...register("firstName", {
-                required:{
-                  value: true,
-                  message: "Enter your FirstName Name",
-                },
-              })} 
-            />                
-            <br />
-            <input type="text" id='email' placeholder={errors.email ? "Please Enter Your Email" : 'Enter Your Email'} 
-              className={errors.email ? "error-placeholder" : "normal-placeholder"}
-              {...register("email", {
-                required:{
-                  value: true,
-                  message: "Enter your email",
-                },
-              })}
-            />                
-            <br />
-            <input type="text" id='phone' placeholder={errors.phone ? "Please Enter Your Phone Number" : 'Enter Your Phone Number'} 
-              className={errors.phone ? "error-placeholder" : "normal-placeholder"} 
-              {...register("phone", {
-                required:{
-                  value: true,
-                  message: "Enter your Number",
-                },
-              })}
-            />
-            <br />
-            <textarea name="text" id="notes" placeholder={errors.notes ? "Please Enter Sum Notes" : 'Enter Your Notes'} 
-              className={errors.notes ? "error-placeholder" : "normal-placeholder"}
-              {...register("notes", {
-                required:{
-                  value: true,
-                  message: "Enter Sum Notes",
-                },
-              })}>  
-            </textarea>
-            <button type='submit' className={isSubmitting ? "hoverbutton" : ""} disabled={isSubmitting}>
-              {isSubmitting ? "Submitting..." : "Submit"}
-            </button>
-          </form>
-        </div>
-        <Link to='home' spy={true} smooth={true} offset={-100} duration={500} onClick={closeMenu}>
-          <button className='contact-btnn2'>
-            <i class="bi bi-arrow-up"></i>
-          </button>
-        </Link>
-      </div>
-    </>
-  )
-}
+    <section className="contact" id="contact">
+      <div className="contact-header">
+        <h2>
+          Get In <span>Touch</span>
+        </h2>
 
-export default Contact
+        <p>
+          Have a project in mind or want to connect? Feel free to reach out.
+        </p>
+      </div>
+
+      <div className="contact-card">
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <input
+            type="text"
+            placeholder="Your Full Name"
+            className="contact-input"
+            {...register("name", {
+              required: "Name is required",
+            })}
+          />
+
+          {errors.name && (
+            <small className="error-text">{errors.name.message}</small>
+          )}
+
+          <input
+            type="email"
+            placeholder="Your Email Address"
+            className="contact-input"
+            {...register("email", {
+              required: "Email is required",
+              pattern: {
+                value: /^\S+@\S+$/i,
+                message: "Enter a valid email",
+              },
+            })}
+          />
+
+          {errors.email && (
+            <small className="error-text">{errors.email.message}</small>
+          )}
+
+          <input
+            type="tel"
+            placeholder="Phone Number (Optional)"
+            className="contact-input"
+            {...register("phone")}
+          />
+
+          <textarea
+            rows="6"
+            placeholder="Write your message..."
+            className="contact-input"
+            {...register("message", {
+              required: "Message is required",
+            })}
+          />
+
+          {errors.message && (
+            <small className="error-text">{errors.message.message}</small>
+          )}
+
+          <button
+            type="submit"
+            disabled={isSubmitting}
+            className="submit-btn"
+          >
+            {isSubmitting ? "Sending..." : "Send Message"}
+          </button>
+        </form>
+
+        <div className="contact-socials">
+          <a
+            href="https://github.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i className="bi bi-github"></i>
+          </a>
+
+          <a
+            href="https://linkedin.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i className="bi bi-linkedin"></i>
+          </a>
+
+          <a href="mailto:yourmail@gmail.com">
+            <i className="bi bi-envelope-fill"></i>
+          </a>
+        </div>
+      </div>
+
+      <Link
+        to="home"
+        smooth={true}
+        duration={500}
+        offset={-80}
+      >
+        <button className="scroll-top">
+          <i className="bi bi-arrow-up"></i>
+        </button>
+      </Link>
+    </section>
+  );
+};
+
+export default Contact;
