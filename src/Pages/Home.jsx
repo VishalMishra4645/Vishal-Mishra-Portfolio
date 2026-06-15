@@ -27,7 +27,7 @@ const Home = () => {
             </button>
           </a>
 
-          <a href="/resume.pdf" download>
+          <a href="/resume.pdf" download="Vishal_Mishra.pdf">
             <button className="secondary-btn">
               Download Resume
             </button>

@@ -4,7 +4,9 @@ import Project from "../Pages/Project";
 import html from "../images/Skills/html.png";
 import css from "../images/Skills/css.png";
 import js from "../images/Skills/JavaScript.png";
+import angular from "../images/Skills/angular.png";
 import react from "../images/Skills/React.webp";
+import bootstrap from "../images/Skills/bootstrap.png";
 
 const Skills = () => {
   const techStack = [
@@ -12,13 +14,13 @@ const Skills = () => {
     { name: "CSS3", img: css },
     { name: "JavaScript", img: js },
     { name: "React.js", img: react },
-    { name: "Angular", img: react }, // baad me Angular logo laga dena
-    { name: "TypeScript", img: js },
-    { name: "Bootstrap", img: css },
+    { name: "Angular", img: angular }, 
+    // { name: "TypeScript", img: js },
+    { name: "Bootstrap", img: bootstrap },
     { name: "Node.js", img: js },
     { name: "Express.js", img: js },
     { name: "MongoDB", img: js },
-    { name: "Git", img: js },
+    // { name: "Git", img: js },
     { name: "REST API", img: js },
   ];
 
