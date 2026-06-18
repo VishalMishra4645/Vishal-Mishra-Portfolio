@@ -7,7 +7,7 @@ const Services = () => {
       <section className="services" id="services">
         <div className="section-title">
           <h1>
-            What I <span>Do</span>
+            My <span>Services</span>
           </h1>
           <p>
             Building modern, responsive and scalable web applications using

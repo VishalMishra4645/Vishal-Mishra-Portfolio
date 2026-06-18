@@ -11,7 +11,7 @@ const Project = () => {
     description:
       "A modern gaming landing page built with React.js. The project focuses on responsive design, reusable components, smooth user experience and attractive visual presentation.",
     tech: "React.js • JavaScript • CSS3",
-    live: "https://game-mkto.onrender.com",
+    live: "https://vishalgamestore.vercel.app/",
     github: "#",
   },
   {
